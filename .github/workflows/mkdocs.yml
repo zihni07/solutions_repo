@@ -1,0 +1,33 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Zmień na gałąź, której używasz
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Krok 1: Klonowanie repozytorium
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Krok 2: Ustawienie Python środowiska
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      # Krok 3: Instalacja MkDocs i zależności
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+
+      # Krok 4: Budowanie i publikowanie dokumentacji
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site  # MkDocs domyślnie buduje dokumentację w katalogu `site`
