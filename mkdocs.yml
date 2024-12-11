@@ -1,6 +1,6 @@
 site_name: Math 2024/25 Winter
 theme:
-  name: material
+  name: readthedocs
   highlightjs: true
   hljs_languages:
     - yaml
