@@ -1,3 +1,5 @@
-# Witaj w Dokumentacji
+# Welcome!
 
-To jest cos fajnego!
+$$
+E=mc^2
+$$
