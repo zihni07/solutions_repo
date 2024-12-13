@@ -1,6 +1,7 @@
 # Projectile Motion: Quick Notes
 
 ### What is Projectile Motion?
+
 Projectile motion is the motion of an object under the influence of gravity, following a curved path called a **parabola**. It occurs when an object is launched into the air with an initial velocity.
 
 ---
