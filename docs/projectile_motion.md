@@ -6,6 +6,7 @@ Projectile motion is the motion of an object under the influence of gravity, fol
 ---
 
 ### Key Components
+
 1. **Initial Velocity ($v_0$):** The speed and direction at which the object is launched.
 
    - Horizontal component: $v_x = v_0 \cos(\theta)$
