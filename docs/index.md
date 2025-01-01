@@ -1,5 +1,5 @@
-# Welcome!
+# Template for Home Page
 
-$$
-E=mc^2
-$$
+# Welcome to the **{{ site.title }}** documentation!
+
+This documentation is a work in progress.
