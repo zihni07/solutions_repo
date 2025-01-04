@@ -16,6 +16,5 @@ Below are the steps you need to follow:
 
 **Source Code & WWW**
 
-You can find the source code in the following repository:  
-[GitHub repo](https://github.com/dchorazkiewicz/solutions_repo)
-[WWW](https://github.com/dchorazkiewicz/solutions_repo)
+- [GitHub repo](https://github.com/dchorazkiewicz/solutions_repo)
+- [WWW](https://github.com/dchorazkiewicz/solutions_repo)
