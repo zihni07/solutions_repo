@@ -1,4 +1,4 @@
-site_name: Math 2024/25 Winter
+site_name: Physics Summer 2025
 theme:
   name: readthedocs
   highlightjs: true
@@ -14,3 +14,23 @@ markdown_extensions:
 extra_javascript:
   - js/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - Home: index.md
+  - Mechanics:
+      - Problem 1: Mechanics/Problem_1.md
+      - Problem 2: Mechanics/Problem_2.md
+  - Gravity:
+      - Problem 1: Gravity/Problem_1.md
+      - Problem 2: Gravity/Problem_2.md
+      - Problem 3: Gravity/Problem_3.md
+  - Waves:
+      - Problem 1: Waves/Problem_1.md
+  - Electromagnetism:
+      - Problem 1: Electromagnetism/Problem_1.md
+  - Circuits:
+      - Problem 1: Circuits/Problem_1.md
+  - Measurements:
+      - Problem 1: Measurements/Problem_1.md
+  - Statistics:
+      - Problem 1: Statistics/Problem_1.md
+      - Problem 2: Statistics/Problem_2.md

@@ -1,5 +1,2 @@
-# Template for Home Page
+# Physics 2025 - Solutions
 
-# Welcome to the **{{ site.title }}** documentation!
-
-This documentation is a work in progress.
