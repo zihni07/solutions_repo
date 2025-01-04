@@ -5,7 +5,7 @@
 Below are the steps you need to follow:
 
 1. Create a GitHub account if you don’t have one.
-2. Fork this repository to your account.  
+2. **Fork** this repository to your account.  
    ![Fork Repository](docs/_pics/fork.png)
 3. Enable the **Issues** tab:
     - Go to the `Settings` tab and check the **Issues** option.  
