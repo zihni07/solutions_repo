@@ -17,4 +17,4 @@ Below are the steps you need to follow:
 **Source Code & WWW**
 
 - [GitHub repo](https://github.com/dchorazkiewicz/solutions_repo)
-- [WWW](https://github.com/dchorazkiewicz/solutions_repo)
+- [WWW](https://dchorazkiewicz.github.io/solutions_repo/)
