@@ -1,30 +1,20 @@
-# Repozytorium Dokumentacji MkDocs
+# Physics 2025 - Solutions
 
-To repozytorium zawiera konfigurację do automatycznego budowania i publikowania dokumentacji za pomocą MkDocs i GitHub Pages.
+## How to use this repository
 
-## Struktura Repozytorium
+Below are the steps you need to follow:
 
-- `.github/workflows/deploy.yml` – Konfiguracja GitHub Actions do automatycznego wdrażania.
-- `docs/` – Katalog zawierający pliki dokumentacji w formacie Markdown.
-- `mkdocs.yml` – Plik konfiguracyjny MkDocs.
-- `README.md` – Ten plik z instrukcją obsługi.
+1. Create a GitHub account if you don’t have one.
+2. Fork this repository to your account.  
+   ![Fork Repository](docs/_pics/fork.png)
+3. Enable the **Issues** tab:
+    - Go to the `Settings` tab and check the **Issues** option.  
+      ![Enable Issues](docs/_pics/issues.png)
+4. Add your professor as a collaborator:
+    - Go to the `Settings` tab and add their GitHub username in the **Collaborators** section.  
+      ![Add Collaborator](docs/_pics/collaborators.png)
 
-## Jak Używać
+## Source Code
 
-1. **Dodawanie lub Edycja Dokumentacji:**
-   - Edytuj istniejące pliki Markdown w katalogu `docs/` lub dodaj nowe.
-
-2. **Publikacja Zmian:**
-   - Po dokonaniu zmian, wykonaj następujące polecenia:
-     ```bash
-     git add .
-     git commit -m "Aktualizacja dokumentacji"
-     git push origin main
-     ```
-   - GitHub Actions automatycznie zbuduje i opublikuje zaktualizowaną dokumentację na GitHub Pages.
-
-## Konfiguracja GitHub Pages
-
-1. Przejdź do ustawień repozytorium na GitHub.
-2. W sekcji "Pages" ustaw źródło na gałąź `gh-pages`.
-3. Po skonfigurowaniu, dokumentacja będzie dostępna pod adresem:
+You can find the source code in the following repository:  
+[GitHub repo](https://github.com/dchorazkiewicz/solutions_repo)
