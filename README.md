@@ -1,5 +1,15 @@
 # Physics 2025 - Solutions
 
+## Technical setup
+
+* Install Visual Studio Code from [here](https://code.visualstudio.com/)
+* Install folowing extensions in Visual Studio Code:
+    * Github Repositories (GitHub, Inc.)
+    * GitHub Copilot (GitHub Copilot)
+    * GitHub Actions (GitHub, Inc.)
+    * Python (Microsoft)
+
+
 ## How to use this repository
 
 Below are the steps you need to follow:
