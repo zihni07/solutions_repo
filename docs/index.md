@@ -1,4 +1,4 @@
-# Physics 2025 - Solutions
+# Template repository for Physics and Mathematics problems
 
 ## Technical setup
 
