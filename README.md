@@ -31,4 +31,4 @@ Below are the steps you need to follow:
 
 ## Where can I find the problems?
 
-Please visit the [Physics 2025 Problems](https://dchorazkiewicz.github.io/Physics-2024-25-Summer/Exercises_for_Students/exercises_dch/) website.
+Please visit the [Physics 2025 Problems](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/) website.
