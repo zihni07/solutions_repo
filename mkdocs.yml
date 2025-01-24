@@ -12,29 +12,6 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 extra_javascript:
-  - js/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-# nav:
-#   - Home: index.md
-#   - Physics:
-#     - Mechanics:
-#         - Problem 1: Physics/Mechanics/Problem_1.md
-#         - Problem 2: Physics/Mechanics/Problem_2.md
-#     - Gravity:
-#         - Problem 1: Physics/Gravity/Problem_1.md
-#         - Problem 2: Physics/Gravity/Problem_2.md
-#         - Problem 3: Physics/Gravity/Problem_3.md
-#     - Waves:
-#         - Problem 1: Physics/Waves/Problem_1.md
-#     - Electromagnetism:
-#         - Problem 1: Physics/Electromagnetism/Problem_1.md
-#     - Circuits:
-#         - Problem 1: Physics/Circuits/Problem_1.md
-#     - Statistics:
-#         - Problem 1: Physics/Statistics/Problem_1.md
-#         - Problem 2: Physics/Statistics/Problem_2.md
-#     - Measurements:
-#         - Problem 1: Physics/Measurements/Problem_1.md
-#     - Mathemetics:
-#         - Problem 1: Mathematics/
+
     
