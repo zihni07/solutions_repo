@@ -11,8 +11,8 @@
 
 ## Useful links
 
-* https://www.python.org/
-* https://docs.anaconda.com/miniconda/
+* [Python](https://www.python.org/)
+* [Miniconda Documentation](https://docs.anaconda.com/miniconda/)
 
 
 
@@ -42,3 +42,4 @@ Please visit the [Physics 2025 Problems](https://dchorazkiewicz.github.io/Mathem
 * [Physics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Physics/Exercises_for_Students/exercises_dch/)
 * [Mathematics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Mathematics/Exercises/)
 * [Discret Mathematics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Discrete_Mathematics/Exercises/)
+
