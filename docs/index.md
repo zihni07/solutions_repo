@@ -1,4 +1,4 @@
-# Template repository for Physics and Mathematics problems
+# Introduction
 
 ## Technical setup
 
@@ -8,6 +8,12 @@
     * GitHub Copilot (GitHub Copilot)
     * GitHub Actions (GitHub, Inc.)
     * Python (Microsoft)
+
+## Useful links
+
+* https://www.python.org/
+* https://docs.anaconda.com/miniconda/
+
 
 
 ## How to use this repository
@@ -31,4 +37,8 @@ Below are the steps you need to follow:
 
 ## Where can I find the problems?
 
-Please visit the [Physics 2025 Problems](https://dchorazkiewicz.github.io/Physics-2024-25-Summer/Exercises_for_Students/exercises_dch/) website.
+Please visit the [Physics 2025 Problems](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/) website.
+
+* [Physics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Physics/Exercises_for_Students/exercises_dch/)
+* [Mathematics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Mathematics/Exercises/)
+* [Discret Mathematics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Discrete_Mathematics/Exercises/)

@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material mkdocs-macros-plugin pymdown-extensions mkdocs-mermaid2-plugin
 
       - name: Build documentation
         run: mkdocs build --site-dir site
