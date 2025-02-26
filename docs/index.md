@@ -13,6 +13,7 @@
 
 * [Python](https://www.python.org/)
 * [Miniconda Documentation](https://docs.anaconda.com/miniconda/)
+* [Google Colab](https://colab.research.google.com/)
 
 
 
@@ -29,6 +30,7 @@ Below are the steps you need to follow:
 4. Add your professor as a collaborator:
     - Go to the `Settings` tab and add their GitHub username in the **Collaborators** section.  
       ![Add Collaborator](_pics/collaborators.png)
+5. Install python: [Download](https://www.python.org/downloads/)
 
 **Source Code & WWW**
 
