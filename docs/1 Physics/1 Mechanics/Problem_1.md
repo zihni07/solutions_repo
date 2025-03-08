@@ -5,6 +5,7 @@
 Projectile motion follows Newton’s laws and can be described by kinematic equations. The horizontal and vertical motions are independent, governed by the equations:
 
 $$ x = v_0 \cos(\theta) t $$
+
 $$ y = h + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$
 
 Solving for the range when \( y = 0 \), we obtain:
