@@ -120,6 +120,48 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="forced-damped-pendulum-analysis">Forced Damped Pendulum Analysis</h1>
+<h2 id="theoretical-foundation">Theoretical Foundation</h2>
+<p>The motion of a forced damped pendulum is governed by the equation:</p>
+<div class="arithmatex">\[ \frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \omega_0^2 \sin\theta = A \cos(\omega t) \]</div>
+<p>where:
+- <span class="arithmatex">\(\theta\)</span> is the angular displacement,
+- <span class="arithmatex">\(b\)</span> is the damping coefficient,
+- <span class="arithmatex">\(\omega_0\)</span> is the natural frequency,
+- <span class="arithmatex">\(A\)</span> is the amplitude of the external driving force,
+- <span class="arithmatex">\(\omega\)</span> is the driving frequency.</p>
+<p>For small angles, we approximate <span class="arithmatex">\( \sin\theta \approx \theta \)</span>, reducing the equation to a linear form:</p>
+<div class="arithmatex">\[ \frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t) \]</div>
+<p>This linearized form allows for analytical solutions describing resonance and energy transfer within the system.</p>
+<h3 id="resonance-condition">Resonance Condition</h3>
+<p>The system exhibits resonance when the driving frequency <span class="arithmatex">\(\omega\)</span> is close to the natural frequency <span class="arithmatex">\(\omega_0\)</span>, leading to large amplitude oscillations.</p>
+<h2 id="implementation-in-python">Implementation in Python</h2>
+<p>The following Python script simulates the motion of a forced damped pendulum using numerical methods.</p>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<h2 id="observations">Observations</h2>
+<ul>
+<li>When the damping is low and the driving frequency matches <span class="arithmatex">\(\omega_0\)</span>, resonance occurs, leading to large oscillations.</li>
+<li>As damping increases, oscillations decay, reducing amplitude.</li>
+<li>For certain parameter values, chaotic motion emerges, leading to irregular trajectories.</li>
+</ul>
+<h2 id="advanced-analysis">Advanced Analysis</h2>
+<ul>
+<li><strong>Phase Portraits:</strong> Visualizing <span class="arithmatex">\(\theta\)</span> vs. <span class="arithmatex">\(\dot{\theta}\)</span> reveals periodic, quasiperiodic, or chaotic behavior.</li>
+<li><strong>Poincaré Sections:</strong> Stroboscopic sampling helps identify periodicity and chaos.</li>
+<li><strong>Bifurcation Diagrams:</strong> Mapping steady-state solutions as parameters vary provides insights into chaotic transitions.</li>
+</ul>
+<h2 id="limitations-and-extensions">Limitations and Extensions</h2>
+<ul>
+<li>The model assumes a sinusoidal driving force; real-world systems may have non-periodic inputs.</li>
+<li>Air resistance and nonlinear damping effects are not included.</li>
+<li>Numerical solutions depend on step size and integration method precision.</li>
+</ul>
+<h2 id="applications">Applications</h2>
+<p>The forced damped pendulum model is relevant in:
+- <strong>Engineering:</strong> Suspension bridges and mechanical resonance.
+- <strong>Physics:</strong> Driven RLC circuits.
+- <strong>Biomechanics:</strong> Human gait and balance control.</p>
+<p>This exploration bridges theory with computation, providing insights into nonlinear dynamics and chaos theory.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
