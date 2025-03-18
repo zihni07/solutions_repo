@@ -7,7 +7,7 @@ Projectile motion describes the motion of an object under the influence of gravi
 ### 1.1 Governing Equations
 The equations of motion follow from Newton's second law:
 
-$ F = ma $
+$$ F = ma $$
 
 For projectile motion in two dimensions:
 
@@ -18,9 +18,13 @@ For projectile motion in two dimensions:
   $$ y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$
   
 where:
+
 - $ v_0 $ is the initial velocity,
+
 - $ \theta $ is the launch angle,
+
 - $ g $ is the acceleration due to gravity,
+
 - $ t $ is the time elapsed.
 
 The velocity components at any time $ t $ are:
