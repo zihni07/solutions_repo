@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Projectile Motion: A Detailed Exploration - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Projectile Motion: A Detailed Exploration";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -46,8 +46,62 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current">1 Mechanics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Projectile Motion: A Detailed Exploration</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#11-governing-equations">1.1 Governing Equations</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#12-time-of-flight">1.2 Time of Flight</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#13-range-of-the-projectile">1.3 Range of the Projectile</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#14-maximum-height">1.4 Maximum Height</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-range-dependence">2. Analysis of Range Dependence</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#21-effect-of-launch-angle">2.1 Effect of Launch Angle</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#22-effect-of-initial-velocity">2.2 Effect of Initial Velocity</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#23-effect-of-gravity">2.3 Effect of Gravity</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#24-effect-of-launch-height">2.4 Effect of Launch Height</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-practical-applications">3. Practical Applications</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#31-sports">3.1 Sports</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#32-engineering-and-ballistics">3.2 Engineering and Ballistics</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#33-space-science">3.3 Space Science</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-implementation-in-python">4. Implementation in Python</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#41-range-vs-launch-angle">4.1 Range vs. Launch Angle</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#42-projectile-trajectory-simulation">4.2 Projectile Trajectory Simulation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#43-maximum-height-vs-launch-angle">4.3 Maximum Height vs. Launch Angle</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#44-extending-the-simulation">4.4 Extending the Simulation</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#5-limitations-and-extensions">5. Limitations and Extensions</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#51-assumptions-in-the-ideal-model">5.1 Assumptions in the Ideal Model</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#52-advanced-considerations">5.2 Advanced Considerations</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -111,7 +165,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Projectile Motion: A Detailed Exploration</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -119,37 +173,108 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="constants">Constants</h1>
-<p>g = 9.81  # gravitational acceleration (m/s^2)</p>
-<h1 id="function-to-compute-projectile-motion">Function to compute projectile motion</h1>
-<p><img alt="alt text" src="../image-4.png"/>
-<img alt="alt text" src="../image-5.png"/></p>
-<h3 id="projectile-motion-analysis">Projectile Motion Analysis</h3>
-<h4 id="1-governing-equations">1. Governing Equations</h4>
-<p>Projectile motion is governed by the following kinematic equations:</p>
+<h1 id="projectile-motion-a-detailed-exploration">Projectile Motion: A Detailed Exploration</h1>
+<h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
+<p>Projectile motion describes the motion of an object under the influence of gravity, assuming no air resistance. The motion can be analyzed by decomposing it into horizontal and vertical components. This type of motion is governed by kinematic equations and provides fundamental insights into physics and engineering applications.</p>
+<h3 id="11-governing-equations">1.1 Governing Equations</h3>
+<p>The equations of motion follow from Newton's second law:</p>
+<p>$ F = ma $</p>
+<p>For projectile motion in two dimensions:</p>
 <ul>
-<li>Horizontal motion: $$ x = v_0 \cos(\theta) t $$</li>
-<li>Vertical motion: $$ y = h_0 + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$</li>
+<li>
+<p><strong>Horizontal motion (constant velocity):</strong>
+  $$ x(t) = v_0 \cos(\theta) t $$</p>
+</li>
+<li>
+<p><strong>Vertical motion (accelerated motion due to gravity):</strong>
+  $$ y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$</p>
+</li>
 </ul>
-<p>The time of flight is obtained by solving:
-$$ t_f = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2 g h_0}}{g} $$</p>
-<p>The range is given by:
-$$ R = v_0 \cos(\theta) \cdot t_f $$</p>
-<h4 id="2-computational-analysis">2. Computational Analysis</h4>
+<p>where:
+- $ v_0 $ is the initial velocity,
+- $ \theta $ is the launch angle,
+- $ g $ is the acceleration due to gravity,
+- $ t $ is the time elapsed.</p>
+<p>The velocity components at any time $ t $ are:</p>
+<div class="arithmatex">\[ v_x = v_0 \cos(\theta) $$
+$$ v_y = v_0 \sin(\theta) - g t \]</div>
+<h3 id="12-time-of-flight">1.2 Time of Flight</h3>
+<p>The time when the projectile reaches the ground is found by setting $ y = 0 $:</p>
+<div class="arithmatex">\[ t_f = \frac{2 v_0 \sin(\theta)}{g} \]</div>
+<p>This equation provides insight into how the initial speed and angle affect the duration of flight.</p>
+<h3 id="13-range-of-the-projectile">1.3 Range of the Projectile</h3>
+<p>The horizontal range is given by:</p>
+<div class="arithmatex">\[ R = v_0 \cos(\theta) t_f = \frac{v_0^2 \sin(2\theta)}{g} \]</div>
+<p>This equation shows that the maximum range occurs at $ \theta = 45^\circ $ and is directly proportional to the square of the initial velocity.</p>
+<h3 id="14-maximum-height">1.4 Maximum Height</h3>
+<p>The highest point $ y_{max} $ is found when $ v_y = 0 $:</p>
+<div class="arithmatex">\[ y_{max} = \frac{v_0^2 \sin^2(\theta)}{2g} \]</div>
+<p>This formula helps determine the peak altitude reached by the projectile.</p>
+<h2 id="2-analysis-of-range-dependence">2. Analysis of Range Dependence</h2>
+<h3 id="21-effect-of-launch-angle">2.1 Effect of Launch Angle</h3>
 <ul>
-<li>A numerical simulation is used to track projectile motion.</li>
-<li>The range is computed as a function of the launch angle.</li>
-<li>A plot visualizes how range varies with angle.</li>
+<li>The range follows a sinusoidal relationship, peaking at $ 45^\circ $.</li>
+<li>Complementary angles ($ \theta $ and $ 90^\circ - \theta $) yield the same range.</li>
 </ul>
-<h4 id="3-observations">3. Observations</h4>
+<h3 id="22-effect-of-initial-velocity">2.2 Effect of Initial Velocity</h3>
 <ul>
-<li>The optimal angle for maximum range is <strong>45 degrees</strong> in an ideal scenario (no air resistance).</li>
-<li>Initial height affects the range significantly.</li>
-<li>The model can be extended to include drag forces for real-world applications.
-"""</li>
+<li>Range increases quadratically with initial speed.</li>
+<li>A higher initial velocity results in a longer trajectory and increased maximum height.</li>
 </ul>
+<h3 id="23-effect-of-gravity">2.3 Effect of Gravity</h3>
+<ul>
+<li>Stronger gravity shortens both range and time of flight.</li>
+<li>On celestial bodies with lower gravity (e.g., the Moon), projectiles travel much farther.</li>
+</ul>
+<h3 id="24-effect-of-launch-height">2.4 Effect of Launch Height</h3>
+<ul>
+<li>A projectile launched from an elevated position stays airborne longer, extending its range.</li>
+<li>The additional term for height in the range equation introduces asymmetry in the trajectory.</li>
+</ul>
+<h2 id="3-practical-applications">3. Practical Applications</h2>
+<h3 id="31-sports">3.1 Sports</h3>
+<ul>
+<li>Ballistics in football, basketball, and golf.</li>
+<li>Optimizing angles for maximum distance or height.</li>
+</ul>
+<h3 id="32-engineering-and-ballistics">3.2 Engineering and Ballistics</h3>
+<ul>
+<li>Missile trajectory calculations.</li>
+<li>Design of artillery and projectile-based defense systems.</li>
+</ul>
+<h3 id="33-space-science">3.3 Space Science</h3>
+<ul>
+<li>Rocket launches and planetary landings.</li>
+<li>Escape velocity and orbital mechanics calculations.</li>
+</ul>
+<h2 id="4-implementation-in-python">4. Implementation in Python</h2>
+<p>Below is a Python script that simulates projectile motion and plots various aspects of the motion:</p>
+<h3 id="41-range-vs-launch-angle">4.1 Range vs. Launch Angle</h3>
+<p><img alt="alt text" src="../image-10.png"/></p>
+<h3 id="42-projectile-trajectory-simulation">4.2 Projectile Trajectory Simulation</h3>
+<p><img alt="alt text" src="../image-11.png"/></p>
+<h3 id="43-maximum-height-vs-launch-angle">4.3 Maximum Height vs. Launch Angle</h3>
+<p><img alt="alt text" src="../image-12.png"/></p>
+<h3 id="44-extending-the-simulation">4.4 Extending the Simulation</h3>
+<ul>
+<li>Modify the code to include different gravitational accelerations.</li>
+<li>Introduce air resistance for a more realistic trajectory.</li>
+<li>Simulate varying launch heights.</li>
+</ul>
+<h2 id="5-limitations-and-extensions">5. Limitations and Extensions</h2>
+<h3 id="51-assumptions-in-the-ideal-model">5.1 Assumptions in the Ideal Model</h3>
+<ul>
+<li><strong>Neglecting Air Resistance:</strong> In reality, drag alters the trajectory.</li>
+<li><strong>Ignoring Wind Effects:</strong> Crosswinds and tailwinds significantly impact real-world projectile motion.</li>
+<li><strong>Constant Gravity:</strong> Gravity slightly varies with altitude, especially in high-altitude launches.</li>
+</ul>
+<h3 id="52-advanced-considerations">5.2 Advanced Considerations</h3>
+<ul>
+<li><strong>Numerical Simulations:</strong> Solving differential equations for motion with drag.</li>
+<li><strong>Uneven Terrain:</strong> Adjusting the impact location based on varying elevation.</li>
+<li><strong>Multi-Stage Projectiles:</strong> Studying objects with varying thrust and mass changes (e.g., rockets).</li>
+</ul>
+<p>This Markdown document serves as a comprehensive introduction to projectile motion, its equations, analysis, and Python simulation. It also provides avenues for further research and computational modeling in real-world applications.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
