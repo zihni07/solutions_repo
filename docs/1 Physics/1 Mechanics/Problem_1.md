@@ -1,33 +1,33 @@
-# Problem 1
-# Projectile Motion Analysis
+import numpy as np
+import matplotlib.pyplot as plt
 
-## Theoretical Foundation
-Projectile motion follows Newton’s laws and can be described by kinematic equations. The horizontal and vertical motions are independent, governed by the equations:
+# Constants
+g = 9.81  # gravitational acceleration (m/s^2)
 
-$$ x = v_0 \cos(\theta) t $$
+# Function to compute projectile motion
+![alt text](image-4.png)
+![alt text](image-5.png)
+### Projectile Motion Analysis
 
-$$ y = h + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$
+#### 1. Governing Equations
+Projectile motion is governed by the following kinematic equations:
 
-Solving for the range when \( y = 0 \), we obtain:
+- Horizontal motion: $$ x = v_0 \cos(\theta) t $$
+- Vertical motion: $$ y = h_0 + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$
 
-$$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
+The time of flight is obtained by solving:
+$$ t_f = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2 g h_0}}{g} $$
 
-## Implementation in Python
-The following Python script simulates projectile motion and visualizes the range vs. launch angle.
+The range is given by:
+$$ R = v_0 \cos(\theta) \cdot t_f $$
 
-![alt text](image.png)
+#### 2. Computational Analysis
+- A numerical simulation is used to track projectile motion.
+- The range is computed as a function of the launch angle.
+- A plot visualizes how range varies with angle.
 
-## Observations
-- The range is maximized at **$\theta = 45^\circ$**, as seen in the graph.
-- Increasing initial velocity **$v_0$** extends the range.
-- If the projectile is launched from a height **$h > 0$**, the time of flight increases, affecting the range.
-
-## Limitations and Extensions
-- Air resistance is neglected in this idealized model.
-- Future extensions can include drag force and wind effects, making the model more realistic.
-
-$$ F_d = \frac{1}{2} C_d \rho A v^2 $$
-
-This provides a solid foundation for understanding projectile motion across various domains.
-
-
+#### 3. Observations
+- The optimal angle for maximum range is **45 degrees** in an ideal scenario (no air resistance).
+- Initial height affects the range significantly.
+- The model can be extended to include drag forces for real-world applications.
+"""
