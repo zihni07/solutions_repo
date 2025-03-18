@@ -50,6 +50,16 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-governing-equation">1. Governing Equation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-computational-analysis">2. Computational Analysis</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-observations">3. Observations</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-extensions">4. Extensions</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#5-practical-applications">5. Practical Applications</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -119,49 +129,54 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
-<h1 id="forced-damped-pendulum-analysis">Forced Damped Pendulum Analysis</h1>
-<h2 id="theoretical-foundation">Theoretical Foundation</h2>
-<p>The motion of a forced damped pendulum is governed by the equation:</p>
-<div class="arithmatex">\[ \frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \omega_0^2 \sin\theta = A \cos(\omega t) \]</div>
-<p>where:
-- <span class="arithmatex">\(\theta\)</span> is the angular displacement,
-- <span class="arithmatex">\(b\)</span> is the damping coefficient,
-- <span class="arithmatex">\(\omega_0\)</span> is the natural frequency,
-- <span class="arithmatex">\(A\)</span> is the amplitude of the external driving force,
-- <span class="arithmatex">\(\omega\)</span> is the driving frequency.</p>
-<p>For small angles, we approximate <span class="arithmatex">\( \sin\theta \approx \theta \)</span>, reducing the equation to a linear form:</p>
-<div class="arithmatex">\[ \frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t) \]</div>
-<p>This linearized form allows for analytical solutions describing resonance and energy transfer within the system.</p>
-<h3 id="resonance-condition">Resonance Condition</h3>
-<p>The system exhibits resonance when the driving frequency <span class="arithmatex">\(\omega\)</span> is close to the natural frequency <span class="arithmatex">\(\omega_0\)</span>, leading to large amplitude oscillations.</p>
-<h2 id="implementation-in-python">Implementation in Python</h2>
-<p>The following Python script simulates the motion of a forced damped pendulum using numerical methods.</p>
-<p><img alt="alt text" src="../image-1.png"/></p>
-<h2 id="observations">Observations</h2>
+<p><img alt="alt text" src="../image-6.png"/>
+<img alt="alt text" src="../image-7.png"/></p>
+<h3 id="forced-damped-pendulum-analysis">Forced Damped Pendulum Analysis</h3>
+<h4 id="1-governing-equation">1. Governing Equation</h4>
+<p>The forced damped pendulum follows the nonlinear differential equation:
+$$ \frac{d^2\theta}{dt^2} + q \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = F_d \cos(\Omega t) $$
+where:
+- <span class="arithmatex">\( q \)</span> is the damping coefficient,
+- <span class="arithmatex">\( F_d \)</span> is the amplitude of the driving force,
+- <span class="arithmatex">\( \Omega \)</span> is the frequency of the external force,
+- <span class="arithmatex">\( g \)</span> is gravitational acceleration,
+- <span class="arithmatex">\( L \)</span> is the length of the pendulum.</p>
+<p>For small angles, we approximate <span class="arithmatex">\( \sin\theta \approx \theta \)</span>, reducing the system to a linear driven oscillator.</p>
+<h4 id="2-computational-analysis">2. Computational Analysis</h4>
 <ul>
-<li>When the damping is low and the driving frequency matches <span class="arithmatex">\(\omega_0\)</span>, resonance occurs, leading to large oscillations.</li>
-<li>As damping increases, oscillations decay, reducing amplitude.</li>
-<li>For certain parameter values, chaotic motion emerges, leading to irregular trajectories.</li>
+<li>The system is solved numerically using the Runge-Kutta method.</li>
+<li>The solution explores different damping and driving force values.</li>
+<li>The phase portrait visualizes periodic and chaotic behavior.</li>
+<li>Time evolution of <span class="arithmatex">\( \theta \)</span> is plotted to observe resonance and long-term behavior.</li>
+<li>Poincaré sections can be used to analyze quasiperiodicity and chaos.</li>
+<li>Bifurcation diagrams help track parameter-driven changes in system behavior.</li>
 </ul>
-<h2 id="advanced-analysis">Advanced Analysis</h2>
+<h4 id="3-observations">3. Observations</h4>
 <ul>
-<li><strong>Phase Portraits:</strong> Visualizing <span class="arithmatex">\(\theta\)</span> vs. <span class="arithmatex">\(\dot{\theta}\)</span> reveals periodic, quasiperiodic, or chaotic behavior.</li>
-<li><strong>Poincaré Sections:</strong> Stroboscopic sampling helps identify periodicity and chaos.</li>
-<li><strong>Bifurcation Diagrams:</strong> Mapping steady-state solutions as parameters vary provides insights into chaotic transitions.</li>
+<li>For small <span class="arithmatex">\( F_d \)</span>, the system exhibits periodic oscillations.</li>
+<li>Increasing <span class="arithmatex">\( F_d \)</span> can lead to chaotic behavior, visible in the phase space.</li>
+<li>The system resonates when <span class="arithmatex">\( \Omega \)</span> matches the natural frequency.</li>
+<li>Beyond a critical driving force, the pendulum transitions from periodic to chaotic motion.</li>
+<li>Lyapunov exponents can be computed to confirm chaotic dynamics.</li>
 </ul>
-<h2 id="limitations-and-extensions">Limitations and Extensions</h2>
+<h4 id="4-extensions">4. Extensions</h4>
 <ul>
-<li>The model assumes a sinusoidal driving force; real-world systems may have non-periodic inputs.</li>
-<li>Air resistance and nonlinear damping effects are not included.</li>
-<li>Numerical solutions depend on step size and integration method precision.</li>
+<li>Introduce nonlinear damping terms to model realistic friction.</li>
+<li>Study the effects of external noise or random perturbations on the system.</li>
+<li>Analyze the energy transfer mechanisms in forced oscillatory systems.</li>
+<li>Compare behavior with real-world driven oscillators, such as RLC circuits.</li>
+<li>Explore multi-pendulum interactions and coupled oscillators.</li>
 </ul>
-<h2 id="applications">Applications</h2>
-<p>The forced damped pendulum model is relevant in:
-- <strong>Engineering:</strong> Suspension bridges and mechanical resonance.
-- <strong>Physics:</strong> Driven RLC circuits.
-- <strong>Biomechanics:</strong> Human gait and balance control.</p>
-<p>This exploration bridges theory with computation, providing insights into nonlinear dynamics and chaos theory.</p>
+<h4 id="5-practical-applications">5. Practical Applications</h4>
+<ul>
+<li><strong>Engineering:</strong> Understanding resonance in bridges and mechanical systems.</li>
+<li><strong>Climate Science:</strong> Modeling oscillations in atmospheric and oceanic flows.</li>
+<li><strong>Biology:</strong> Studying rhythmic behaviors in neural and cardiovascular systems.</li>
+<li><strong>Electronics:</strong> Comparing with driven RLC circuits in electrical engineering.</li>
+<li><strong>Seismology:</strong> Modeling earthquake dynamics using forced oscillator principles.</li>
+</ul>
+<p>By numerically simulating the forced damped pendulum and analyzing its phase space, resonance, and chaotic dynamics, we gain insights into complex oscillatory systems that appear in various scientific and engineering domains.
+"""</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
