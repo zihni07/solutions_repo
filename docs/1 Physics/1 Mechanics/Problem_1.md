@@ -19,13 +19,13 @@ For projectile motion in two dimensions:
   
 where:
 
-- $ v_0 $ is the initial velocity,
+- $$ v_0 $$ is the initial velocity,
 
-- $ \theta $ is the launch angle,
+- $$ \theta $$ is the launch angle,
 
-- $ g $ is the acceleration due to gravity,
+- $$ g $$ is the acceleration due to gravity,
 
-- $ t $ is the time elapsed.
+- $$ t $$ is the time elapsed.
 
 The velocity components at any time $ t $ are:
 
