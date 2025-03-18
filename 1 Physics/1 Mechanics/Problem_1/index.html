@@ -119,30 +119,37 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
-<h1 id="projectile-motion-analysis">Projectile Motion Analysis</h1>
-<h2 id="theoretical-foundation">Theoretical Foundation</h2>
-<p>Projectile motion follows Newton’s laws and can be described by kinematic equations. The horizontal and vertical motions are independent, governed by the equations:</p>
-<div class="arithmatex">\[ x = v_0 \cos(\theta) t \]</div>
-<div class="arithmatex">\[ y = h + v_0 \sin(\theta) t - \frac{1}{2} g t^2 \]</div>
-<p>Solving for the range when <span class="arithmatex">\( y = 0 \)</span>, we obtain:</p>
-<div class="arithmatex">\[ R = \frac{v_0^2 \sin(2\theta)}{g} \]</div>
-<h2 id="implementation-in-python">Implementation in Python</h2>
-<p>The following Python script simulates projectile motion and visualizes the range vs. launch angle.</p>
-<p><img alt="alt text" src="../image.png"/></p>
-<h2 id="observations">Observations</h2>
+<p>import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="constants">Constants</h1>
+<p>g = 9.81  # gravitational acceleration (m/s^2)</p>
+<h1 id="function-to-compute-projectile-motion">Function to compute projectile motion</h1>
+<p><img alt="alt text" src="../image-4.png"/>
+<img alt="alt text" src="../image-5.png"/></p>
+<h3 id="projectile-motion-analysis">Projectile Motion Analysis</h3>
+<h4 id="1-governing-equations">1. Governing Equations</h4>
+<p>Projectile motion is governed by the following kinematic equations:</p>
 <ul>
-<li>The range is maximized at <strong><span class="arithmatex">\(\theta = 45^\circ\)</span></strong>, as seen in the graph.</li>
-<li>Increasing initial velocity <strong><span class="arithmatex">\(v_0\)</span></strong> extends the range.</li>
-<li>If the projectile is launched from a height <strong><span class="arithmatex">\(h &gt; 0\)</span></strong>, the time of flight increases, affecting the range.</li>
+<li>Horizontal motion: $$ x = v_0 \cos(\theta) t $$</li>
+<li>Vertical motion: $$ y = h_0 + v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$</li>
 </ul>
-<h2 id="limitations-and-extensions">Limitations and Extensions</h2>
+<p>The time of flight is obtained by solving:
+$$ t_f = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2 g h_0}}{g} $$</p>
+<p>The range is given by:
+$$ R = v_0 \cos(\theta) \cdot t_f $$</p>
+<h4 id="2-computational-analysis">2. Computational Analysis</h4>
 <ul>
-<li>Air resistance is neglected in this idealized model.</li>
-<li>Future extensions can include drag force and wind effects, making the model more realistic.</li>
+<li>A numerical simulation is used to track projectile motion.</li>
+<li>The range is computed as a function of the launch angle.</li>
+<li>A plot visualizes how range varies with angle.</li>
 </ul>
-<div class="arithmatex">\[ F_d = \frac{1}{2} C_d \rho A v^2 \]</div>
-<p>This provides a solid foundation for understanding projectile motion across various domains.</p>
+<h4 id="3-observations">3. Observations</h4>
+<ul>
+<li>The optimal angle for maximum range is <strong>45 degrees</strong> in an ideal scenario (no air resistance).</li>
+<li>Initial height affects the range significantly.</li>
+<li>The model can be extended to include drag forces for real-world applications.
+"""</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
