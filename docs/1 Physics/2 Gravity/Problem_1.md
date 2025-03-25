@@ -15,15 +15,15 @@ Equating these forces:
 
 $$ \frac{m v^2}{r} = \frac{G M m}{r^2} $$
 
-Since velocity $  v  $ is given by:
+Since velocity $v$ is given by:
 
 $$ v = \frac{2 \pi r}{T} $$
 
-Substituting $ v $ in the equation:
+Substituting $v$ in the equation:
 
 $$ \frac{m (4 \pi^2 r^2)}{T^2 r} = \frac{G M m}{r^2} $$
 
-Canceling $ m $ and rearranging:
+Canceling $m$ and rearranging:
 
 $$ T^2 = \frac{4 \pi^2 r^3}{G M} $$
 
@@ -31,7 +31,7 @@ This confirms Kepler’s Third Law:
 
 $$ T^2 \propto r^3 $$
 
-where $ G $ is the gravitational constant, $ M $ is the central body’s mass, $ T $ is the orbital period, and $ r $ is the orbital radius.
+where $G$ is the gravitational constant, $ M $ is the central body’s mass, $ T $ is the orbital period, and $r$ is the orbital radius.
 ![alt text](image-5.png)
 
 ### Implications in Astronomy
