@@ -9,7 +9,7 @@ The concept of escape velocity is crucial for understanding the conditions requi
    - The minimum velocity required to maintain a stable circular orbit around a celestial body.
    - Given by:
      $$ v_1 = \sqrt{\frac{GM}{R}} $$
-   - Where $ G $ is the gravitational constant, $ M $ is the mass of the celestial body, and $ R $ is its radius.
+   - Where $G$ is the gravitational constant, $M$ is the mass of the celestial body, and $R$ is its radius.
    - This velocity ensures that the centrifugal force due to orbital motion balances the gravitational pull.
 
 2. **Second Cosmic Velocity (Escape Velocity):**
@@ -23,7 +23,7 @@ The concept of escape velocity is crucial for understanding the conditions requi
    - The velocity required to escape the gravitational influence of the entire solar system.
    - It depends on the escape velocity from Earth and the Sun’s influence:
      $$ v_3 = \sqrt{v_2^2 + v_{esc,\odot}^2} $$
-   - Where $ v_{esc,\odot} $ is the escape velocity from the Sun.
+   - Where $v_{esc,\odot}$ is the escape velocity from the Sun.
    - This is crucial for interstellar missions and deep space exploration.
 
 ### Mathematical Derivation
@@ -33,7 +33,7 @@ $$ \text{Total Energy} = \text{Kinetic Energy} + \text{Gravitational Potential E
 
 $$ \frac{1}{2} m v^2 - \frac{GMm}{R} = 0 $$
 
-Solving for $ v $:
+Solving for $v$:
 
 $$ v = \sqrt{\frac{2GM}{R}} $$
 
