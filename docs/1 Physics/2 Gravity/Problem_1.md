@@ -31,7 +31,7 @@ This confirms Kepler’s Third Law:
 
 $$ T^2 \propto r^3 $$
 
-where $G$ is the gravitational constant, $ M $ is the central body’s mass, $ T $ is the orbital period, and $r$ is the orbital radius.
+where $G$ is the gravitational constant, $M$ is the central body’s mass, $T$ is the orbital period, and $r$ is the orbital radius.
 ![alt text](image-5.png)
 
 ### Implications in Astronomy
@@ -41,7 +41,7 @@ where $G$ is the gravitational constant, $ M $ is the central body’s mass, $ T
 
 ### Real-World Examples
 1. **Moon's Orbit Around Earth**
-   - Given Earth’s mass ($ 5.972 \times 10^{24} $ kg) and the Moon’s average orbital radius ($ 3.84 \times 10^8 $ m), Kepler’s Law predicts the Moon’s orbital period correctly (~27.3 days).
+   - Given Earth’s mass ($5.972 \times 10^{24}$ kg) and the Moon’s average orbital radius ($3.84 \times 10^8$ m), Kepler’s Law predicts the Moon’s orbital period correctly (~27.3 days).
 2. **Planets in the Solar System**
    - The relationship holds true for all planets orbiting the Sun, reinforcing its universal applicability.
 
