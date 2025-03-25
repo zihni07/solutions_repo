@@ -10,8 +10,7 @@ The concept of escape velocity is crucial for understanding the conditions requi
    - The minimum velocity required to maintain a stable circular orbit around a celestial body.
    - Given by:
      $$ v_1 = \sqrt{\frac{GM}{R}} $$
-   - Where
-    $G$ is the gravitational constant, $M$ is the mass of the celestial body, and $R$ is its radius.
+   - Where $G$ is the gravitational constant, $M$ is the mass of the celestial body, and $R$ is its radius.
    - This velocity ensures that the centrifugal force due to orbital motion balances the gravitational pull.
 
 2. **Second Cosmic Velocity (Escape Velocity):**
