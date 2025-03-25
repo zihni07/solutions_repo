@@ -58,6 +58,22 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cosmic-velocities-definitions">Cosmic Velocities Definitions</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-derivation">Mathematical Derivation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#computational-analysis">Computational Analysis</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#importance-in-space-exploration">Importance in Space Exploration</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#conclusion">Conclusion</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
@@ -120,6 +136,59 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h2 id="escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</h2>
+<h3 id="motivation">Motivation</h3>
+<p>The concept of escape velocity is crucial for understanding the conditions required to leave a celestial body's gravitational influence. Extending this concept, the first, second, and third cosmic velocities define the thresholds for orbiting, escaping, and leaving a star system. These principles underpin modern space exploration, from launching satellites to interplanetary missions.</p>
+<h3 id="cosmic-velocities-definitions">Cosmic Velocities Definitions</h3>
+<ol>
+<li><strong>First Cosmic Velocity (Orbital Velocity):</strong></li>
+<li>The minimum velocity required to maintain a stable circular orbit around a celestial body.</li>
+<li>Given by:
+     $$ v_1 = \sqrt{\frac{GM}{R}} $$</li>
+<li>Where $ G $ is the gravitational constant, $ M $ is the mass of the celestial body, and $ R $ is its radius.</li>
+<li>
+<p>This velocity ensures that the centrifugal force due to orbital motion balances the gravitational pull.</p>
+</li>
+<li>
+<p><strong>Second Cosmic Velocity (Escape Velocity):</strong></p>
+</li>
+<li>The minimum velocity required to escape a celestial body's gravitational pull without further propulsion.</li>
+<li>Derived from energy conservation:
+     $$ v_2 = \sqrt{\frac{2GM}{R}} $$</li>
+<li>This is $ \sqrt{2} $ times the first cosmic velocity.</li>
+<li>
+<p>At this velocity, the kinetic energy equals the gravitational potential energy, allowing the object to escape indefinitely.</p>
+</li>
+<li>
+<p><strong>Third Cosmic Velocity (Solar System Escape Velocity):</strong></p>
+</li>
+<li>The velocity required to escape the gravitational influence of the entire solar system.</li>
+<li>It depends on the escape velocity from Earth and the Sun’s influence:
+     $$ v_3 = \sqrt{v_2^2 + v_{esc,\odot}^2} $$</li>
+<li>Where $ v_{esc,\odot} $ is the escape velocity from the Sun.</li>
+<li>This is crucial for interstellar missions and deep space exploration.</li>
+</ol>
+<h3 id="mathematical-derivation">Mathematical Derivation</h3>
+<p>To derive the escape velocity, consider the conservation of energy:</p>
+<div class="arithmatex">\[ \text{Total Energy} = \text{Kinetic Energy} + \text{Gravitational Potential Energy} \]</div>
+<div class="arithmatex">\[ \frac{1}{2} m v^2 - \frac{GMm}{R} = 0 \]</div>
+<p>Solving for $ v $:</p>
+<div class="arithmatex">\[ v = \sqrt{\frac{2GM}{R}} \]</div>
+<p>This equation applies to any celestial body, with variations in mass and radius affecting the velocity required for escape.</p>
+<h3 id="computational-analysis">Computational Analysis</h3>
+<p>The following Python script calculates and visualizes these velocities for Earth, Mars, and Jupiter.</p>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<h3 id="importance-in-space-exploration">Importance in Space Exploration</h3>
+<ul>
+<li><strong>Satellites &amp; Space Stations:</strong></li>
+<li>The first cosmic velocity is crucial for placing satellites in stable orbits. The International Space Station (ISS) orbits Earth at approximately 7.66 km/s.</li>
+<li><strong>Lunar &amp; Interplanetary Missions:</strong></li>
+<li>The second cosmic velocity is essential for missions to the Moon, Mars, and beyond. Apollo missions had to exceed Earth's escape velocity to reach the Moon.</li>
+<li><strong>Interstellar Travel:</strong></li>
+<li>The third cosmic velocity is relevant for long-term space exploration. Probes like Voyager 1 and 2 have achieved solar system escape velocity and are currently traveling into interstellar space.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Escape and cosmic velocities define fundamental thresholds in celestial mechanics, guiding modern space exploration efforts. Understanding these principles allows for more efficient mission planning and technological advancements in space travel. They provide the foundation for future endeavors, including planetary colonization and interstellar exploration.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
