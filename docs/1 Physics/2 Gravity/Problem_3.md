@@ -13,12 +13,10 @@ where:
 
 - $G$ is the gravitational constant ($6.67430 \times 10^{-11}$ m³/kg/s²),
 - $M_{earth}$ is Earth's mass ($5.972 \times 10^{24}$ kg),
-
 - $r$ is the radial distance from Earth's center,
-
 - $m$ is the mass of the payload.
 
-Using Newton’s Second Law ($F = ma$), we derive the equations of motion in two-dimensional Cartesian coordinates:
+Using Newton’s Second Law ($ F = ma $), we derive the equations of motion in two-dimensional Cartesian coordinates:
 
 $$ a_x = -\frac{G M_{earth} x}{r^3}, \quad a_y = -\frac{G M_{earth} y}{r^3} $$
 
@@ -35,20 +33,12 @@ where $ (x, y) $ represents the position of the payload.
 We employ the Runge-Kutta method to integrate these equations and determine the payload's trajectory.
 
 ### Python Implementation
-![alt text](image-7.png)
+![alt text](image-8.png)
 
-## Sensitivity Analysis
-The trajectory of the payload depends on several factors:
-- **Initial Velocity**: A small change in velocity can shift a circular orbit to an elliptical, parabolic, or hyperbolic trajectory.
-- **Release Altitude**: Higher release altitudes reduce the required velocity for achieving orbit.
-- **Direction of Release**: The angle of the velocity vector influences whether the payload will reenter, orbit, or escape Earth’s gravity.
+## Additional Simulations
 
-## Real-World Applications
-Understanding these trajectories is essential for:
-- **Satellite Deployment**: Ensuring satellites achieve stable orbits based on velocity and altitude.
-- **Reentry Planning**: Controlling spacecraft descent to ensure safe atmospheric reentry.
-- **Interplanetary Missions**: Launching payloads toward other planets by achieving escape velocity and entering heliocentric orbits.
-- **Space Debris Analysis**: Predicting the paths of defunct satellites and space debris to prevent collisions.
+### Effect of Atmospheric Drag
+![alt text](image-9.png)
 
 ## Conclusion
 By simulating the motion of a payload released near Earth, we gain insights into orbital mechanics and space mission design. This study provides a computational approach to predicting different possible trajectories based on initial conditions. Further analysis can incorporate atmospheric drag, gravitational perturbations, and interactions with other celestial bodies.
