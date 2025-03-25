@@ -10,12 +10,12 @@ The motion of the payload is governed by Newton's Law of Gravitation and Newton'
 $$ F = \frac{G M_{earth} m}{r^2} $$
 
 where:
-- $G$ is the gravitational constant ($ 6.67430 \times 10^{-11} $ m³/kg/s²),
-- $ M_{earth} $ is Earth's mass ($ 5.972 \times 10^{24} $ kg),
-- $ r $ is the radial distance from Earth's center,
-- $ m $ is the mass of the payload.
+- $G$ is the gravitational constant ($6.67430 \times 10^{-11}$ m³/kg/s²),
+- $M_{earth}$ is Earth's mass ($5.972 \times 10^{24}$ kg),
+- $r$ is the radial distance from Earth's center,
+- $m$ is the mass of the payload.
 
-Using Newton’s Second Law ($ F = ma $), we derive the equations of motion in two-dimensional Cartesian coordinates:
+Using Newton’s Second Law ($F = ma$), we derive the equations of motion in two-dimensional Cartesian coordinates:
 
 $$ a_x = -\frac{G M_{earth} x}{r^3}, \quad a_y = -\frac{G M_{earth} y}{r^3} $$
 
