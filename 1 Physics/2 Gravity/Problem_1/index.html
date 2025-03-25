@@ -56,6 +56,24 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#orbital-period-and-orbital-radius">Orbital Period and Orbital Radius</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#keplers-third-law-derivation">Kepler’s Third Law Derivation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#implications-in-astronomy">Implications in Astronomy</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#real-world-examples">Real-World Examples</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#computational-model-in-python">Computational Model in Python</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#extension-to-elliptical-orbits">Extension to Elliptical Orbits</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#conclusion">Conclusion</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -120,6 +138,47 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h2 id="orbital-period-and-orbital-radius">Orbital Period and Orbital Radius</h2>
+<h3 id="motivation">Motivation</h3>
+<p>Kepler's Third Law states that the square of a planet's orbital period is proportional to the cube of its semi-major axis (orbital radius in circular orbits). This relationship is fundamental in celestial mechanics, helping astronomers determine planetary motions and gravitational interactions. Understanding this law allows us to predict satellite orbits, planetary system behavior, and even exoplanetary systems.</p>
+<h3 id="keplers-third-law-derivation">Kepler’s Third Law Derivation</h3>
+<p>For a circular orbit, the centripetal force required to maintain motion is provided by gravitational attraction:</p>
+<div class="arithmatex">\[ F_c = \frac{m v^2}{r} $$
+$$ F_g = \frac{G M m}{r^2} \]</div>
+<p>Equating these forces:</p>
+<div class="arithmatex">\[ \frac{m v^2}{r} = \frac{G M m}{r^2} \]</div>
+<p>Since velocity $ v $ is given by:</p>
+<div class="arithmatex">\[ v = \frac{2 \pi r}{T} \]</div>
+<p>Substituting $ v $ in the equation:</p>
+<div class="arithmatex">\[ \frac{m (4 \pi^2 r^2)}{T^2 r} = \frac{G M m}{r^2} \]</div>
+<p>Canceling $ m $ and rearranging:</p>
+<div class="arithmatex">\[ T^2 = \frac{4 \pi^2 r^3}{G M} \]</div>
+<p>This confirms Kepler’s Third Law:</p>
+<div class="arithmatex">\[ T^2 \propto r^3 \]</div>
+<p>where $ G $ is the gravitational constant, $ M $ is the central body’s mass, $ T $ is the orbital period, and $ r $ is the orbital radius.
+<img alt="alt text" src="../image-5.png"/></p>
+<h3 id="implications-in-astronomy">Implications in Astronomy</h3>
+<ul>
+<li>Used to calculate planetary masses and distances.</li>
+<li>Helps determine exoplanet properties.</li>
+<li>Crucial for spacecraft mission planning and satellite deployment.</li>
+</ul>
+<h3 id="real-world-examples">Real-World Examples</h3>
+<ol>
+<li><strong>Moon's Orbit Around Earth</strong></li>
+<li>Given Earth’s mass ($ 5.972 \times 10^{24} $ kg) and the Moon’s average orbital radius ($ 3.84 \times 10^8 $ m), Kepler’s Law predicts the Moon’s orbital period correctly (~27.3 days).</li>
+<li><strong>Planets in the Solar System</strong></li>
+<li>The relationship holds true for all planets orbiting the Sun, reinforcing its universal applicability.</li>
+</ol>
+<h3 id="computational-model-in-python">Computational Model in Python</h3>
+<p>The following Python script simulates circular orbits and verifies Kepler’s Third Law graphically.</p>
+<p><img alt="alt text" src="../image.png"/>![<img alt="alt text" src="../image-2.png"/>]![alt !</p>
+<h3 id="extension-to-elliptical-orbits">Extension to Elliptical Orbits</h3>
+<p>Kepler’s Third Law extends to elliptical orbits, where the semi-major axis replaces the orbital radius:</p>
+<div class="arithmatex">\[ T^2 \propto a^3 \]</div>
+<p>This generalization helps describe non-circular planetary orbits and spacecraft trajectories.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Kepler’s Third Law remains a powerful tool in celestial mechanics, aiding in planetary studies, exoplanet discovery, and space mission design. Its mathematical elegance bridges theoretical physics and real-world applications.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
