@@ -7,14 +7,14 @@ Kepler's Third Law states that the square of a planet's orbital period is propor
 ### Kepler’s Third Law Derivation
 For a circular orbit, the centripetal force required to maintain motion is provided by gravitational attraction:
 
-$$ F_c = \frac{m v^2}{r} $$
+$$  F_c = \frac{m v^2}{r}  $$
 $$ F_g = \frac{G M m}{r^2} $$
 
 Equating these forces:
 
 $$ \frac{m v^2}{r} = \frac{G M m}{r^2} $$
 
-Since velocity $ v $ is given by:
+Since velocity $  v  $ is given by:
 
 $$ v = \frac{2 \pi r}{T} $$
 
