@@ -129,17 +129,11 @@
 <p>where:</p>
 <ul>
 <li><span class="arithmatex">\(G\)</span> is the gravitational constant (<span class="arithmatex">\(6.67430 \times 10^{-11}\)</span> m³/kg/s²),</li>
-<li>
-<p><span class="arithmatex">\(M_{earth}\)</span> is Earth's mass (<span class="arithmatex">\(5.972 \times 10^{24}\)</span> kg),</p>
-</li>
-<li>
-<p><span class="arithmatex">\(r\)</span> is the radial distance from Earth's center,</p>
-</li>
-<li>
-<p><span class="arithmatex">\(m\)</span> is the mass of the payload.</p>
-</li>
+<li><span class="arithmatex">\(M_{earth}\)</span> is Earth's mass (<span class="arithmatex">\(5.972 \times 10^{24}\)</span> kg),</li>
+<li><span class="arithmatex">\(r\)</span> is the radial distance from Earth's center,</li>
+<li><span class="arithmatex">\(m\)</span> is the mass of the payload.</li>
 </ul>
-<p>Using Newton’s Second Law (<span class="arithmatex">\(F = ma\)</span>), we derive the equations of motion in two-dimensional Cartesian coordinates:</p>
+<p>Using Newton’s Second Law ($ F = ma $), we derive the equations of motion in two-dimensional Cartesian coordinates:</p>
 <div class="arithmatex">\[ a_x = -\frac{G M_{earth} x}{r^3}, \quad a_y = -\frac{G M_{earth} y}{r^3} \]</div>
 <p>where $ (x, y) $ represents the position of the payload.</p>
 <h2 id="types-of-possible-trajectories">Types of Possible Trajectories</h2>
@@ -153,18 +147,10 @@
 <h2 id="numerical-simulation">Numerical Simulation</h2>
 <p>We employ the Runge-Kutta method to integrate these equations and determine the payload's trajectory.</p>
 <h3 id="python-implementation">Python Implementation</h3>
-<p><img alt="alt text" src="../image-7.png"/></p>
-<h2 id="sensitivity-analysis">Sensitivity Analysis</h2>
-<p>The trajectory of the payload depends on several factors:
-- <strong>Initial Velocity</strong>: A small change in velocity can shift a circular orbit to an elliptical, parabolic, or hyperbolic trajectory.
-- <strong>Release Altitude</strong>: Higher release altitudes reduce the required velocity for achieving orbit.
-- <strong>Direction of Release</strong>: The angle of the velocity vector influences whether the payload will reenter, orbit, or escape Earth’s gravity.</p>
-<h2 id="real-world-applications">Real-World Applications</h2>
-<p>Understanding these trajectories is essential for:
-- <strong>Satellite Deployment</strong>: Ensuring satellites achieve stable orbits based on velocity and altitude.
-- <strong>Reentry Planning</strong>: Controlling spacecraft descent to ensure safe atmospheric reentry.
-- <strong>Interplanetary Missions</strong>: Launching payloads toward other planets by achieving escape velocity and entering heliocentric orbits.
-- <strong>Space Debris Analysis</strong>: Predicting the paths of defunct satellites and space debris to prevent collisions.</p>
+<p><img alt="alt text" src="../image-8.png"/></p>
+<h2 id="additional-simulations">Additional Simulations</h2>
+<h3 id="effect-of-atmospheric-drag">Effect of Atmospheric Drag</h3>
+<p><img alt="alt text" src="../image-9.png"/></p>
 <h2 id="conclusion">Conclusion</h2>
 <p>By simulating the motion of a payload released near Earth, we gain insights into orbital mechanics and space mission design. This study provides a computational approach to predicting different possible trajectories based on initial conditions. Further analysis can incorporate atmospheric drag, gravitational perturbations, and interactions with other celestial bodies.
 ```</p>
