@@ -120,6 +120,44 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="wave-interference-simulation">Wave Interference Simulation</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Interference occurs when waves from different sources overlap, forming unique patterns. On a water surface, this can be seen when ripples from different points meet, creating interference patterns. Understanding these patterns helps in visualizing wave behavior and the principles of constructive and destructive interference.</p>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>We aim to analyze interference patterns formed due to the superposition of waves emitted from point sources arranged at the vertices of a chosen regular polygon. This will provide insights into wave interactions and phase relationships.</p>
+<h2 id="mathematical-model">Mathematical Model</h2>
+<p>A circular wave from a point source at <span class="arithmatex">\((x_0, y_0)\)</span> can be described by the Single Disturbance equation:</p>
+<div class="arithmatex">\[
+\eta(x, y, t) = \frac{A}{\sqrt{r}} \cos (kr - \omega t + \phi) 
+\]</div>
+<p>where:
+- <span class="arithmatex">\(\eta(x, y, t)\)</span> is the displacement of the water surface at point <span class="arithmatex">\((x, y)\)</span> and time <span class="arithmatex">\(t\)</span>,
+- <span class="arithmatex">\(A\)</span> is the wave amplitude,
+- <span class="arithmatex">\(k = \frac{2\pi}{\lambda}\)</span> is the wave number,
+- <span class="arithmatex">\(\omega = 2\pi f\)</span> is the angular frequency,
+- <span class="arithmatex">\(r = \sqrt{(x - x_0)^2 + (y - y_0)^2}\)</span> is the distance from the source,
+- <span class="arithmatex">\(\phi\)</span> is the initial phase.</p>
+<p>For multiple wave sources, the total displacement at any point is given by the superposition principle:</p>
+<div class="arithmatex">\[
+\eta_{sum}(x, y, t) = \sum_{i=1}^{N} \eta_i(x, y, t) 
+\]</div>
+<p>where <span class="arithmatex">\(N\)</span> is the number of sources.</p>
+<h2 id="implementation-in-python">Implementation in Python</h2>
+<p>We use Python with Matplotlib and NumPy to simulate wave interference patterns. The approach includes:
+1. Choosing a regular polygon (triangle, square, pentagon, etc.).
+2. Placing wave sources at its vertices.
+3. Calculating the resultant wave field by summing individual waves.
+4. Visualizing the interference pattern.<img alt="alt text" src="../image-4.png"/></p>
+<p><img alt="alt text" src="../image-1.png"/><img alt="alt text" src="../image-2.png"/><img alt="alt text" src="../image-3.png"/></p>
+<h2 id="results-and-observations">Results and Observations</h2>
+<ul>
+<li>Different polygons produce distinct interference patterns.</li>
+<li>Regions of constructive interference (bright spots) and destructive interference (dark spots) are clearly visible.</li>
+<li>Increasing the number of sources leads to more complex patterns.</li>
+<li>A 3D visualization gives a more intuitive understanding of amplitude variations.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>This simulation helps in understanding wave superposition in a visually intuitive way. The principle extends to many physical phenomena, including optics, acoustics, and quantum mechanics.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
