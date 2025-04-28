@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>📚 Problem 1: Exploring the Central Limit Theorem through Simulations - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "\ud83d\udcda Problem 1: Exploring the Central Limit Theorem through Simulations";
         var mkdocs_page_input_path = "1 Physics/6 Statistics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -82,8 +82,22 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">6 Statistics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">📚 Problem 1: Exploring the Central Limit Theorem through Simulations</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">🎯 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-breakdown">🛠 Task Breakdown</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-simulating-sampling-distributions">1. Simulating Sampling Distributions</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-sampling-and-visualization">2. Sampling and Visualization</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-parameter-exploration">3. Parameter Exploration</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-practical-applications-of-the-clt">4. Practical Applications of the CLT</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -111,7 +125,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">6 Statistics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">📚 Problem 1: Exploring the Central Limit Theorem through Simulations</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -119,7 +133,85 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="problem-1-exploring-the-central-limit-theorem-through-simulations">📚 Problem 1: Exploring the Central Limit Theorem through Simulations</h1>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>The <strong>Central Limit Theorem (CLT)</strong> is a fundamental result in probability and statistics.<br/>
+It states that the sampling distribution of the sample mean <span class="arithmatex">\(\bar{X}\)</span> approaches a <strong>normal distribution</strong> <span class="arithmatex">\(N(\mu, \sigma^2/n)\)</span> as the sample size <span class="arithmatex">\(n\)</span> increases, regardless of the shape of the original population distribution.</p>
+<p>Simulations provide an intuitive, visual, and hands-on way to observe this phenomenon, deepening our understanding of the CLT.</p>
+<hr/>
+<h2 id="task-breakdown">🛠 Task Breakdown</h2>
+<h3 id="1-simulating-sampling-distributions">1. Simulating Sampling Distributions</h3>
+<p>We will select several types of <strong>population distributions</strong>:</p>
+<ul>
+<li><strong>Uniform distribution</strong> $ U(a, b) $</li>
+<li><strong>Exponential distribution</strong> $ \text{Exp}(\lambda) $</li>
+<li><strong>Binomial distribution</strong> $ \text{Bin}(n, p) $</li>
+<li><strong>Normal distribution</strong> $ N(\mu, \sigma^2) $ (for control)</li>
+</ul>
+<p>For each distribution:</p>
+<ul>
+<li>Generate a <strong>large dataset</strong> (population size $ \approx 10^5 $).</li>
+</ul>
+<hr/>
+<h3 id="2-sampling-and-visualization">2. Sampling and Visualization</h3>
+<p>For each population:</p>
+<ul>
+<li>
+<p>Randomly sample subsets of various sizes:<br/>
+<span class="arithmatex">\(n \in \{5, 10, 30, 50, 100\}\)</span></p>
+</li>
+<li>
+<p>Repeat <strong>1000</strong> times to build the <strong>sampling distribution</strong> of <span class="arithmatex">\(\bar{X}\)</span>.</p>
+</li>
+<li>Visualize:</li>
+<li><strong>Histograms</strong> with <strong>KDE</strong> (Kernel Density Estimation) plots.</li>
+<li><strong>QQ-plots</strong> to check normality visually.</li>
+</ul>
+<hr/>
+<h3 id="3-parameter-exploration">3. Parameter Exploration</h3>
+<p>Investigate:</p>
+<ul>
+<li>How the <strong>sample size</strong> <span class="arithmatex">\(n\)</span> affects convergence speed.</li>
+<li>How the <strong>population shape</strong> and <strong>population variance</strong> <span class="arithmatex">\(\sigma^2\)</span> influence the <strong>spread</strong> and <strong>skewness</strong> of the sampling distribution.</li>
+</ul>
+<hr/>
+<h3 id="4-practical-applications-of-the-clt">4. Practical Applications of the CLT</h3>
+<p>The Central Limit Theorem is crucial for:</p>
+<ul>
+<li><strong>Estimation</strong>: Confidence intervals for population means.</li>
+<li><strong>Quality Control</strong>: Monitoring production processes.</li>
+<li><strong>Finance</strong>: Risk assessment and prediction models.</li>
+<li><strong>Machine Learning</strong>: Model evaluation with cross-validation.</li>
+</ul>
+<hr/>
+<h1 id="deliverables">📄 Deliverables</h1>
+<ul>
+<li>Well-structured <strong>Markdown report</strong>.</li>
+<li><strong>Python notebooks</strong> or <strong>scripts</strong> implementing the simulations.</li>
+<li><strong>Plots</strong> showcasing the evolution toward normality.</li>
+<li><strong>Discussion</strong> explaining observations and theoretical justifications.</li>
+</ul>
+<hr/>
+<h1 id="hints-and-resources">💡 Hints and Resources</h1>
+<ul>
+<li>Use:</li>
+<li><code>numpy</code> for random sampling.</li>
+<li><code>matplotlib</code> and <code>seaborn</code> for visualization.</li>
+<li><code>scipy.stats.probplot</code> for QQ-plots.</li>
+<li>Start simple, progressively increase complexity.</li>
+<li>Always calculate and show:</li>
+<li>Sample mean <span class="arithmatex">\(\bar{X}\)</span></li>
+<li>Sample variance <span class="arithmatex">\(S^2\)</span></li>
+</ul>
+<hr/>
+<h1 id="python-simulation">🧪 Python Simulation</h1>
+<h2 id="import-required-libraries">Import Required Libraries</h2>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy.stats as stats</p>
+<p>sns.set(style="whitegrid")</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
