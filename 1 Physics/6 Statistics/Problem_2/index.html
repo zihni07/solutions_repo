@@ -120,6 +120,68 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="estimating-pi-using-monte-carlo-methods">Estimating Pi Using Monte Carlo Methods</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Monte Carlo simulations use randomness to solve problems that might be deterministic in principle. One fascinating application is estimating the value of π (pi) — a fundamental mathematical constant — through geometric probability.</p>
+<p>This approach is powerful because:
+- It visually demonstrates probabilistic thinking.
+- It connects concepts from geometry, statistics, and computation.
+- It highlights convergence and randomness in numerical simulations.</p>
+<hr/>
+<h2 id="part-1-estimating-using-a-circle-geometric-probability">Part 1: Estimating π Using a Circle (Geometric Probability)</h2>
+<h3 id="theoretical-foundation">Theoretical Foundation</h3>
+<p>Imagine a unit circle (radius = 1) inscribed in a square of side length 2. The area of the square is <span class="arithmatex">\(( 4 )\)</span> and the area of the circle is <span class="arithmatex">\(( \pi )\)</span>. If we randomly throw darts at the square, the probability that a dart lands inside the circle is:</p>
+<div class="arithmatex">\[
+P = \frac{\text{Area of Circle}}{\text{Area of Square}} = \frac{\pi}{4}
+\]</div>
+<p>Hence, we can estimate π as:</p>
+<div class="arithmatex">\[
+\pi \approx 4 \times \frac{\text{Number of points inside circle}}{\text{Total points}}
+\]</div>
+<h3 id="simulation-in-python">Simulation in Python</h3>
+<p>Estimate of π with 100 points: 3.080000</p>
+<p>Estimate of π with 1000 points: 3.072000</p>
+<p>Estimate of π with 10000 points: 3.157200</p>
+<p>Estimate of π with 100000 points: 3.135560</p>
+<h3 id="visualization">Visualization</h3>
+<p><img alt="alt text" src="../image-5.png"/></p>
+<h3 id="convergence-analysis">Convergence Analysis</h3>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<hr/>
+<h2 id="part-2-estimating-using-buffons-needle">Part 2: Estimating π Using Buffon’s Needle</h2>
+<h3 id="theoretical-foundation_1">Theoretical Foundation</h3>
+<p>Buffon's Needle is a probability experiment where a needle of length <span class="arithmatex">\(( l )\)</span> is dropped onto a floor with parallel lines spaced distance <span class="arithmatex">\(( d )\)</span> apart. If <span class="arithmatex">\(( l \leq d )\)</span>, then the probability that the needle crosses a line is:</p>
+<div class="arithmatex">\[
+P = \frac{2l}{d\pi}
+\]</div>
+<p>Rearranging gives the estimation of π:</p>
+<div class="arithmatex">\[
+\pi \approx \frac{2l \times n}{d \times \text{number of crossings}}
+\]</div>
+<h3 id="simulation-in-python_1">Simulation in Python</h3>
+<p>Estimate of π with 100 throws: 3.571429</p>
+<p>Estimate of π with 1000 throws: 3.144654</p>
+<p>Estimate of π with 5000 throws: 3.184713</p>
+<p>Estimate of π with 10000 throws: 3.133323</p>
+<h3 id="advanced-visualization-optional-concept">Advanced Visualization (Optional Concept)</h3>
+<p>Due to complexity in drawing angles and positions of each needle, this is usually left as conceptual or approximated with overlays.</p>
+<hr/>
+<h2 id="comparison-and-convergence">Comparison and Convergence</h2>
+<p><img alt="alt text" src="../image-8.png"/></p>
+<hr/>
+<h2 id="summary-of-findings">Summary of Findings</h2>
+<ul>
+<li>Circle-based method is simpler and converges faster with fewer points.</li>
+<li>Buffon’s Needle is a clever historical method but requires more trials for good accuracy.</li>
+<li>Visualization and coding help in understanding random sampling, geometry, and convergence.</li>
+</ul>
+<hr/>
+<h2 id="hints-best-practices">Hints &amp; Best Practices</h2>
+<ul>
+<li>Use <code>numpy</code> for efficient random sampling.</li>
+<li>For Buffon’s Needle, make sure the length of the needle does not exceed the line spacing.</li>
+<li>Start with small iterations to test and validate logic, then scale up.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
