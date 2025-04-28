@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Pendulum Experiment Report - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Pendulum Experiment Report";
         var mkdocs_page_input_path = "1 Physics/7 Measurements/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -90,8 +90,26 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">7 Measurements</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Pendulum Experiment Report</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-collection">Data Collection</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#calculations">Calculations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-calculate-the-period">1. Calculate the Period</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-determine-gravitational-acceleration">2. Determine Gravitational Acceleration</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-propagate-uncertainties">3. Propagate Uncertainties</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#final-results">Final Results</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis">Analysis</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -111,7 +129,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">7 Measurements</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Pendulum Experiment Report</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -119,7 +137,195 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="pendulum-experiment-report">Pendulum Experiment Report</h1>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Attach the weight to the string and fix the other end to a sturdy support.</li>
+<li>Measure the length of the pendulum, <span class="arithmatex">\(L\)</span>, from the suspension point to the center of the weight.</li>
+</ul>
+<p>Given:
+- Measured Length: 
+  $$
+  L = 1.000 \, \text{m}
+  $$
+- Ruler Resolution: 
+  $$
+  0.001 \, \text{m}
+  $$
+- Uncertainty in length:</p>
+<p>$$
+  \Delta L = \frac{0.001}{2} = 0.0005 \, \text{m}
+  $$</p>
+<h2 id="data-collection">Data Collection</h2>
+<ul>
+<li>Displace the pendulum slightly (<span class="arithmatex">\(&lt;15^\circ\)</span>) and release.</li>
+<li>Measure the time for 10 oscillations.</li>
+</ul>
+<p>Measured times for 10 oscillations (<span class="arithmatex">\(T_{10}\)</span>) (seconds):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Trial</th>
+<th style="text-align: center;"><span class="arithmatex">\(T_{10}\)</span> (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">20.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">20.3</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">20.2</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">20.0</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">20.4</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">20.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">20.2</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">20.3</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">20.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">20.2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Mean time:</li>
+</ul>
+<p>$$
+  \overline{T_{10}} = 20.19 \, \text{s}
+  $$</p>
+<ul>
+<li>Standard deviation:</li>
+</ul>
+<p>$$
+  \sigma_T = 0.14 \, \text{s}
+  $$</p>
+<ul>
+<li>Uncertainty in the mean:</li>
+</ul>
+<p>$$
+  \Delta T_{10} = \frac{0.14}{\sqrt{10}} = 0.044 \, \text{s}
+  $$</p>
+<h2 id="calculations">Calculations</h2>
+<h3 id="1-calculate-the-period">1. Calculate the Period</h3>
+<ul>
+<li>Period of one oscillation:</li>
+</ul>
+<p>$$
+  T = \frac{\overline{T_{10}}}{10} = \frac{20.19}{10} = 2.019 \, \text{s}
+  $$</p>
+<ul>
+<li>Uncertainty in the period:</li>
+</ul>
+<p>$$
+  \Delta T = \frac{\Delta T_{10}}{10} = \frac{0.044}{10} = 0.0044 \, \text{s}
+  $$</p>
+<h3 id="2-determine-gravitational-acceleration">2. Determine Gravitational Acceleration</h3>
+<ul>
+<li>Gravitational acceleration:</li>
+</ul>
+<p>$$
+  g = \frac{4\pi^2L}{T^2}
+  $$</p>
+<p>Substituting:</p>
+<p>$$
+  g = \frac{4\pi^2(1.000)}{(2.019)^2}
+  $$</p>
+<p>$$
+  g = \frac{39.478}{4.076} = 9.684 \, \text{m/s}^2
+  $$</p>
+<h3 id="3-propagate-uncertainties">3. Propagate Uncertainties</h3>
+<ul>
+<li>Propagation formula:</li>
+</ul>
+<p>$$
+  \Delta g = g \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \frac{\Delta T}{T} \right)^2 }
+  $$</p>
+<p>Substituting:</p>
+<p>$$
+  \Delta g = 9.684 \times \sqrt{ \left( \frac{0.0005}{1.000} \right)^2 + \left( 2 \times \frac{0.0044}{2.019} \right)^2 }
+  $$</p>
+<p>First, calculating inside the square root:</p>
+<p>$$
+  = \sqrt{ (2.5\times10^{-7}) + (9.6\times10^{-6}) }
+  $$
+  $$
+  = \sqrt{9.85\times10^{-6}}
+  $$
+  $$
+  = 0.00314
+  $$</p>
+<p>Thus:</p>
+<p>$$
+  \Delta g = 9.684 \times 0.00314 = 0.0304 \, \text{m/s}^2
+  $$</p>
+<hr/>
+<h2 id="final-results">Final Results</h2>
+<p>Length (L) = 1.0000 ± 0.0005 m</p>
+<p>Mean time for 10 oscillations (T10_mean) = 20.190 ± 0.038 s</p>
+<p>Period (T) = 2.0190 ± 0.0038 s</p>
+<p>Gravitational acceleration (g) = 9.685 ± 0.037 m/s²</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Quantity</th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Length (<span class="arithmatex">\(L\)</span>)</td>
+<td style="text-align: center;"><span class="arithmatex">\(1.000 \pm 0.0005 \, \text{m}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Mean time for 10 oscillations (<span class="arithmatex">\(\overline{T_{10}}\)</span>)</td>
+<td style="text-align: center;"><span class="arithmatex">\(20.19 \pm 0.044 \, \text{s}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Period (<span class="arithmatex">\(T\)</span>)</td>
+<td style="text-align: center;"><span class="arithmatex">\(2.019 \pm 0.0044 \, \text{s}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Gravitational acceleration (<span class="arithmatex">\(g\)</span>)</td>
+<td style="text-align: center;"><span class="arithmatex">\(9.684 \pm 0.0304 \, \text{m/s}^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="analysis">Analysis</h2>
+<ul>
+<li>The measured <span class="arithmatex">\(g\)</span> (<span class="arithmatex">\(9.684 \, \text{m/s}^2\)</span>) is slightly lower than the standard <span class="arithmatex">\(9.81 \, \text{m/s}^2\)</span>, but within the uncertainty.</li>
+<li>Measurement resolution affects <span class="arithmatex">\(\Delta L\)</span>, which minimally affects <span class="arithmatex">\(g\)</span>.</li>
+<li>Timing variability has a larger influence on the uncertainty <span class="arithmatex">\(\Delta T\)</span>, and therefore on <span class="arithmatex">\(\Delta g\)</span>.</li>
+<li>Assumptions:</li>
+<li>Small angle approximation (<span class="arithmatex">\(\theta &lt; 15^\circ\)</span>) holds.</li>
+<li>Negligible air resistance.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
