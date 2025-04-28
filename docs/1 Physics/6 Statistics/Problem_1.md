@@ -86,18 +86,6 @@ By simulating different sampling processes, we can **visually** and **numericall
 
 # Full Python Code
 
-## Import Required Libraries
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from scipy.stats import norm
-
-# Set random seed for reproducibility
-np.random.seed(42)
-```
-
 ## Define Sampling Function
 
 ```python
@@ -156,7 +144,10 @@ simulate_sampling(binomial_pop, "Binomial Distribution")
 pareto_pop = (np.random.pareto(a=2, size=100000) + 1) * 2
 simulate_sampling(pareto_pop, "Pareto (Heavy-tailed) Distribution")
 ```
-
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
 ---
 
 # Example Results and Observations
