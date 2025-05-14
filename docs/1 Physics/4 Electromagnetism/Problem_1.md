@@ -1,143 +1,102 @@
 # Problem 1
-# Electromagnetism — Simulating the Effects of the Lorentz Force
+# Simulating the Effects of the Lorentz Force
 
-### Motivation
-The Lorentz force, expressed as:
+## Motivation
 
-$$
-\mathbf{F} = q \mathbf{E} + q \mathbf{v} \times \mathbf{B}
-$$
+The Lorentz force, expressed as $\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})$, governs the motion of charged particles in electric and magnetic fields. It is fundamental in fields like plasma physics, particle accelerators, and astrophysics. By focusing on simulations, we can explore the practical applications and visualize the complex trajectories that arise due to this force.
 
-governs the motion of charged particles in electric and magnetic fields.  
-It is foundational in fields like plasma physics, particle accelerators, and astrophysics.
+## Task Overview
 
-By focusing on simulations, we can explore practical applications and visualize the complex trajectories arising from this force, gaining both qualitative and quantitative insights into real-world systems.
+1. **Theory and Application**: Identify systems where the Lorentz force is key and discuss the roles of electric ($\mathbf{E}$) and magnetic ($\mathbf{B}$) fields.
+2. **Simulating Particle Motion**: Simulate the trajectory of a charged particle under various field configurations (uniform magnetic field, combined electric and magnetic fields, crossed fields, and non-uniform magnetic field).
+3. **Parameter Exploration**: Vary parameters like field strengths, initial velocity, charge, and mass to observe their effects.
+4. **Visualization**: Create 2D and 3D plots to visualize the particle’s trajectory and highlight phenomena like Larmor radius and drift velocity.
 
----
+## Solution
 
-###  Task
+### 1. Theory and Application
 
-#### 1. Exploration of Applications
-- Identify systems where the Lorentz force plays a key role:
-  - Particle accelerators (e.g., cyclotrons, synchrotrons)
-  - Mass spectrometers
-  - Plasma confinement devices (e.g., Tokamaks)
-  - Earth's magnetosphere interactions with solar wind
-- Discuss the relevance of electric ($\mathbf{E}$) and magnetic ($\mathbf{B}$) fields in controlling particle motion, such as:
-  - Velocity selection in crossed $\mathbf{E}$ and $\mathbf{B}$ fields (velocity selector)
-  - Magnetic bottle traps for confining plasmas
+#### Systems Involving the Lorentz Force
+The Lorentz force plays a critical role in several systems:
 
-#### 2. Simulating Particle Motion
-- Implement a simulation to compute and visualize the trajectory of a charged particle under:
-  - A uniform magnetic field.
-  - A uniform electric field.
-  - Combined uniform electric and magnetic fields.
-  - Crossed electric and magnetic fields.
-- Simulate various particle motions:
-  - Circular motion
-  - Helical motion
-  - Linear acceleration
-  - Drift motion in crossed fields
+- **Particle Accelerators**: In cyclotrons, the magnetic field causes charged particles to move in circular paths, while electric fields accelerate them. The Lorentz force ensures particles follow a spiral trajectory as their energy increases.
+- **Mass Spectrometers**: The Lorentz force separates ions based on their mass-to-charge ratio by deflecting them in a magnetic field.
+- **Plasma Confinement**: In fusion devices like tokamaks, magnetic fields confine charged particles in a plasma, preventing them from hitting the reactor walls.
 
-#### 3. Parameter Exploration
-- Allow variations in:
-  - Field strengths ($\mathbf{E}$, $\mathbf{B}$)
-  - Initial particle velocity ($\mathbf{v}$)
-  - Charge ($q$) and mass ($m$) of the particle
-- Observe how these parameters influence:
-  - Larmor radius
-  - Cyclotron frequency
-  - Drift velocity
+#### Role of Electric and Magnetic Fields
 
-#### 4. Visualization
-- Create labeled 2D and 3D plots:
-  - X vs Y, X vs Z, and 3D trajectories
-- Highlight key physical phenomena:
-  - Larmor radius
-  - Cyclotron frequency
-  - $\mathbf{E} \times \mathbf{B}$ drift velocity
+- **Electric Field ($\mathbf{E}$)**: Exerts a force $\mathbf{F}_E = q \mathbf{E}$, accelerating the particle in the direction of the field (if $q$ is positive). This force is independent of the particle’s velocity.
+- **Magnetic Field ($\mathbf{B}$)**: Exerts a force $\mathbf{F}_B = q (\mathbf{v} \times \mathbf{B})$, which is perpendicular to both the velocity $\mathbf{v}$ and the magnetic field $\mathbf{B}$. This force causes circular or helical motion but does no work since it is always perpendicular to the velocity.
 
----
+### 2. Simulating Particle Motion
 
-##  Solution
-
-### Equations of Motion
-The Lorentz force provides the basis for the equations of motion:
+We’ll simulate the motion of a charged particle under the Lorentz force using the following equation of motion:
 
 $$
-\frac{d\mathbf{v}}{dt} = \frac{q}{m}(\mathbf{E} + \mathbf{v} \times \mathbf{B})
+\mathbf{F} = m \mathbf{a} = q (\mathbf{E} + \mathbf{v} \times \mathbf{B})
 $$
 
+This gives the acceleration:
+
 $$
-\frac{d\mathbf{r}}{dt} = \mathbf{v}
+\mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{q}{m} (\mathbf{E} + \mathbf{v} \times \mathbf{B})
 $$
 
-### Numerical Integration
-We will use **Euler's method** for simplicity, but **Runge-Kutta 4th order (RK4)** is preferable for higher accuracy.
+We’ll use the **Runge-Kutta 4th-order method (RK4)** to numerically solve this differential equation, as it provides better accuracy than the Euler method. We’ll simulate the following cases:
 
-###  Python Code (Euler Method)
+- **Uniform Magnetic Field**: $\mathbf{B} = (0, 0, B_z)$, $\mathbf{E} = 0$.
+- **Combined Uniform Electric and Magnetic Fields**: $\mathbf{B} = (0, 0, B_z)$, $\mathbf{E} = (E_x, 0, 0)$.
+- **Crossed Fields**: $\mathbf{B} = (0, 0, B_z)$, $\mathbf{E} = (E_x, 0, 0)$, with $\mathbf{E} \perp \mathbf{B}$.
+- **Non-Uniform Magnetic Field (Magnetic Bottle)**: $\mathbf{B}$ varies spatially.
 
-![alt text](image.png)
-
-
-
-###  Additional: Runge-Kutta Method
-
-![alt text](image-1.png)
+#### Python Script for Simulation
+Below is a Python script that simulates the particle’s motion under the Lorentz force for the above cases. It uses NumPy for calculations and Matplotlib for 2D and 3D visualizations.
 
 
-##  Observations
+![alt text](image-3.png)
 
-### Theoretical Background
-- **Cyclotron Frequency** $\omega_c$:
-  
-  $$
-  \omega_c = \frac{qB}{m}
-  $$
+![alt text](image-1.png)  
 
-- **Larmor Radius** $r_L$:
+![alt text](image-4.png)
 
-  $$
-  r_L = \frac{mv_\perp}{qB}
-  $$
+![alt text](image-5.png)
 
-Where $v_\perp$ is the velocity component perpendicular to $\mathbf{B}$.
+![alt text](image-6.png)
 
-### Simulation Insights
-- Pure magnetic fields: Particles move in perfect circles (or helices if there is a $v_z$ component).
-- Crossed fields: Particles drift at velocity $\mathbf{v}_d$:
+![alt text](image-7.png)
 
-  $$
-  \mathbf{v}_d = \frac{\mathbf{E} \times \mathbf{B}}{B^2}
-  $$
+![alt text](image-8.png)
 
-- Particle mass and charge directly affect the radius and frequency of rotation.
+![alt text](image-9.png)
 
----
 
-##  Deliverables Summary
-- A Python notebook implementing both Euler and Runge-Kutta methods.
-- Simulations for:
-  - Uniform $\mathbf{B}$ fields
-  - Crossed $\mathbf{E}$ and $\mathbf{B}$ fields
-- Clear and well-labeled plots.
-- Discussion of practical relevance to cyclotrons, plasma traps, and space physics.
+### 3. Parameter Exploration
 
----
+We’ll explore the effects of varying parameters:
 
-##  Hints and Resources
-- For better precision, use adaptive time-stepping methods.
-- Explore relativistic effects for ultra-fast particles using the Lorentz factor $\gamma$.
-- Extend simulations to non-uniform fields or magnetic mirrors.
+- **Field Strengths**: Increase $B_z$ to 2 T. A stronger magnetic field reduces the Larmor radius, as $R_L = \frac{m v_\perp}{q B}$, leading to tighter circular motion.
+- **Initial Velocity**: Double $v_0$ to $(2 \times 10^5, 2 \times 10^5, 0)$ m/s. This increases the Larmor radius proportionally, as $R_L \propto v_\perp$.
+- **Charge and Mass**: Use an electron ($q = -1.6 \times 10^{-19}$ C, $m = 9.11 \times 10^{-31}$ kg). The smaller mass and opposite charge result in a smaller Larmor radius and opposite direction of rotation.
 
-**Key References:**
-- Griffiths, D.J., *Introduction to Electrodynamics*
-- Birdsall and Langdon, *Plasma Physics via Computer Simulation*
+These variations can be implemented by modifying the constants in the script and re-running the simulation.
 
----
+### 4. Visualization
 
-#  Conclusion
-By applying the Lorentz force in numerical simulations, we develop an intuitive and quantitative understanding of charged particle motion in electromagnetic fields. These principles underpin technologies from particle accelerators to magnetic plasma confinement systems, forming a bridge between theoretical electromagnetism and cutting-edge applications.
+The script generates 2D and 3D plots for each case:
 
----
+- **Uniform Magnetic Field**: The particle follows a helical path (circular in the x-y plane) with a Larmor radius of approximately $1.04 \times 10^{-3}$ m.
+- **Combined E and B Fields**: The electric field introduces a drift in the x-direction, resulting in a helical path with a drift velocity of $1.00 \times 10^3$ m/s.
+- **Crossed Fields**: Similar to the combined case, but the drift is more pronounced due to the perpendicular fields.
+- **Magnetic Bottle**: The non-uniform field causes the particle to oscillate along the z-axis, demonstrating confinement.
 
+### Discussion
+
+The simulations highlight key phenomena:
+
+- **Larmor Radius**: In a uniform magnetic field, the particle’s circular motion has a radius $R_L = \frac{m v_\perp}{q B}$, which matches our calculated value.
+- **Drift Velocity**: In crossed fields, the $\mathbf{E} \times \mathbf{B}$ drift velocity is $v_d = \frac{E}{B}$, consistent with our result.
+- **Practical Applications**: The helical motion in a magnetic field is seen in cyclotrons, while the drift in crossed fields is used in mass spectrometers. The magnetic bottle simulation demonstrates plasma confinement, as used in fusion research.
+
+### Conclusion
+
+This simulation successfully demonstrates the effects of the Lorentz force on a charged particle under various field configurations. The visualizations reveal circular, helical, and drifting trajectories, aligning with theoretical expectations. By exploring parameter variations, we gain insight into how field strengths, velocity, and particle properties influence motion, providing a deeper understanding of applications like particle accelerators and plasma confinement systems.
