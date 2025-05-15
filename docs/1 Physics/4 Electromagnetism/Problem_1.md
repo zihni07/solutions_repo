@@ -142,13 +142,6 @@ The script generates 2D and 3D plots for each case:
 - **Crossed Fields**: Similar to the combined case, but the drift is more pronounced due to the perpendicular fields.
 - **Magnetic Bottle**: The non-uniform field causes the particle to oscillate along the z-axis, demonstrating confinement.
 
-### Discussion
-
-The simulations highlight key phenomena:
-
-- **Larmor Radius**: In a uniform magnetic field, the particle’s circular motion has a radius $R_L = \frac{m v_\perp}{q B}$, which matches our calculated value.
-- **Drift Velocity**: In crossed fields, the $\mathbf{E} \times \mathbf{B}$ drift velocity is $v_d = \frac{E}{B}$, consistent with our result.
-- **Practical Applications**: The helical motion in a magnetic field is seen in cyclotrons, while the drift in crossed fields is used in mass spectrometers. The magnetic bottle simulation demonstrates plasma confinement, as used in fusion research.
 
 ### Conclusion
 
